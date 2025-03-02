@@ -71,3 +71,63 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## NOTICE PRACTISE
+
+```bash
+
+$ npm i -g @nestjs/cli
+$ nest new .
+$ npm run start:dev
+
+# Create module
+$ nest g module property
+
+# Create controller
+$ nest g co property
+$ npm i --save class-validator class-transformer
+
+# Create cutom validation
+$ npm i zod
+
+# Create service
+$ nest g s property --no-spec
+
+$ npm install --save @nestjs/typeorm typeorm pg
+
+$ npm i @nestjs/mapped-types
+
+$ npm i typeorm-extension @faker-js/faker
+
+$ npm i @nestjs/config
+
+
+$ nest g res user
+
+$ nest g res auth --no-spec
+
+$ npm install --save @nestjs/passport passport passport-local
+
+$ npm install --save-dev @types/passport-local
+
+$ nest g gu auth/guards/local-auth
+
+
+$ npm i @nestjs/jwt passport-jwt
+
+$ npm i -D @type/passport-jwt
+
+$ openssl rand -hex 32
+
+$ nest g gu auth/guards/jwt-auth
+
+$ npm i bcrypt
+
+$ npm i -D @types/bcrypt
+
+$ nest g gu auth/guards/roles --no-spec
+
+$ npm i -D @types/passport-google-oauth20
+
+$ nest g gu auth/guards/google-auth
+```
