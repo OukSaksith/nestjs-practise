@@ -29,6 +29,7 @@ export class UserController {
   }
 
   @UseGuards(JwtAuthGuard)
+  @Roles(Role.ADMIN)
   @Get('profile')
   getProfile(@Req() req) {
     return this.userService.findOne(req.user.id);
@@ -38,10 +39,10 @@ export class UserController {
   update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
     return this.userService.update(+id, updateUserDto);
   }
-  // @SetMetadata('role', [Role.ADMIN])
+  @SetMetadata('role', [Role.ADMIN])
   @Roles(Role.EDITOR)
-  // @UseGuards(RolesGuard)
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(RolesGuard)
+  @UseGuards(JwtAuthGuard)
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.userService.remove(+id);
